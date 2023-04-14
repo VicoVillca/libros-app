@@ -20,3 +20,21 @@ https://www.etnassoft.com/api/v1/get/?get_categories=all
 - https://preview.themeforest.net/item/chapterone-bookstore-and-publisher-theme/full_screen_preview/24715791?_ga=2.21552123.1597954409.1681156858-1385129398.1656938050
 - https://dt-bookmax.myshopify.com/
 
+# 
+paguina para 
+descargar templelates
+https://bootstraptaste.com/
+https://bootstrapmade.com/
+# templeate usado
+https://bootstrapmade.com/demo/Yummy/ 
+o tambien 
+https://bootstrapmade.com/demo/PhotoFolio/
+
+# Botones
+ inicio
+ mas populares
+ galeria (tipos de libros)(mostramos 3 de cada uno y ver mas)
+ autores en carrucel (fraces y fotos de autores latinoamericanos)
+ estadisticas
+ eventos
+

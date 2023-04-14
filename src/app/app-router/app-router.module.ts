@@ -9,6 +9,7 @@ import { ErrorComponent } from '../views/error/error.component';
 const routes: Routes = [
   { path: '', component: IndexComponent },
   { path: 'book', component: BookComponent },
+  { path: 'book/:id', component: BookComponent },
   { path: 'categoria', component: CategoryComponent },
   { path: '**', component: ErrorComponent },
 ];

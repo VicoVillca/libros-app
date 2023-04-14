@@ -14,16 +14,14 @@ export class AppComponent implements OnInit  {
 
   }
   ngOnInit(): void {
-    this.api.getElements().subscribe({
+    /*this.api.getElements().subscribe({
       next:(l)=>{
-        //console.log(v);
-
         this.books=l;
         console.log(l);
       },
       error:(e)=>console.log(e),
       complete:()=>console.log("terminamos")
-    });
+    });*/
   }
 }
 /**
