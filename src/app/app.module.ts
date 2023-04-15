@@ -14,6 +14,12 @@ import { CategoryComponent } from './views/category/category.component';
 import { RouterModule } from '@angular/router';
 import { AppRouter } from './app-router/app-router.module';
 import { ErrorComponent } from './views/error/error.component';
+import { EstadisticasComponent } from './components/estadisticas/estadisticas.component';
+import { PopularesComponent } from './components/populares/populares.component';
+import { GaleriaComponent } from './components/galeria/galeria.component';
+import { EventosComponent } from './components/eventos/eventos.component';
+import { AutoresComponent } from './components/autores/autores.component';
+import { RecomendacionesComponent } from './components/recomendaciones/recomendaciones.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +30,12 @@ import { ErrorComponent } from './views/error/error.component';
     BookComponent,
     CategoryComponent,
     ErrorComponent,
+    EstadisticasComponent,
+    PopularesComponent,
+    GaleriaComponent,
+    EventosComponent,
+    AutoresComponent,
+    RecomendacionesComponent,
   ],
   imports: [BrowserModule, HttpClientModule, FormsModule,AppRouter],
   providers: [ApiService],

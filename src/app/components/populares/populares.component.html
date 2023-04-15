@@ -1,0 +1,60 @@
+<!-- ======= Menu Section ======= -->
+<section id="populares" class="menu">
+  <div class="container" data-aos="fade-up">
+    <div class="section-header">
+      <p>Mira nuestra <span>lista destacada</span></p>
+    </div>
+
+    <ul
+      class="nav nav-tabs d-flex justify-content-center"
+      data-aos="fade-up"
+      data-aos-delay="200"
+    >
+      <li class="nav-item" *ngFor="let c of recomendados; let i = index">
+        <a
+          class="nav-link"
+          class="{{ getClass(i) }}"
+          data-bs-toggle="tab"
+          (click)="seleccionamos(i)"
+        >
+          <h4>{{ c }}</h4>
+        </a>
+      </li>
+    </ul>
+
+    <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
+      <div class="tab-pane fade active show" id="menu-starters">
+        <div class="tab-header text-center">
+          <p>Categoria</p>
+          <h3>{{ recomendados[seleccionado] }}</h3>
+        </div>
+
+        <div class="row gy-5">
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 menu-item" *ngFor="let item of libros" >
+            <div class="glightbox"
+              ><img
+                src={{item.cover}}
+                class="menu-img img-fluid"
+                style="padding: 0"
+                alt=""
+            /></div>
+
+          </div>
+
+          <!-- Menu Item -->
+        </div>
+
+        <div class="text-center"><button type="button" style="background: var(--color-primary);
+          border: 0;
+          padding-top: 16px;
+          padding: 12px 40px;
+          color: #fff;
+          transition: 0.4s;
+          border-radius: 50px;">ver mas..</button></div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
