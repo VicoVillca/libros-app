@@ -17,7 +17,7 @@ export class PopularesComponent implements OnInit {
   seleccionado: number = 0;
   libros: Libro[] = [];
   constructor(private api: ApiService) {
-    this.libros = api.getLibrosReComenadados(this.recomendados[0]);
+
   }
   seleccionamos(i: number) {
     this.seleccionado = i;
@@ -36,5 +36,7 @@ export class PopularesComponent implements OnInit {
     }
     return c
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.libros = this.api.getLibrosReComenadados(this.recomendados[0]);
+  }
 }

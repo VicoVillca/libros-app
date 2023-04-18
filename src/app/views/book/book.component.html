@@ -1,128 +1,81 @@
+<!-- ======= Breadcrumbs ======= -->
 <main id="main">
-  <!-- ======= Breadcrumbs ======= -->
-  <div class="breadcrumbs">
-    <div class="container">
-      <div class="d-flex justify-content-between align-items-center">
-        <h2>Detalles de libro</h2>
-        <ol>
-          <li><a href="index.html">Home</a></li>
-          <li>Sample Inner Page</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-
-  <section id="chefs" class="chefs section-bg" style="padding-top: 20px;">
+  <section
+    id="populares"
+    class="chefs section-bg"
+    style="margin-top: 50px; scroll-margin-top: 100px"
+  >
     <div class="container" data-aos="fade-up">
-
-
       <div class="row gy-4">
         <div
-          class="col-lg-4 col-md-6 d-flex align-items-stretch"
+          class="col-lg-4 col-md-6 d-flex align-items-end"
           data-aos="fade-up"
           data-aos-delay="100"
         >
           <div class="chef-member">
             <div class="member-img">
               <img
-                src="{{libro.cover}}"
+                src="{{ libro.cover }}"
                 class="img-fluid"
                 alt=""
+                style="min-height: 600px"
               />
             </div>
-
           </div>
         </div>
         <!-- End Chefs Member -->
 
-        <div
-          class="col-lg-8 col-md-12 d-flex align-items-stretch"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-        <div class="chef-member">
-          <div class="member-info">
-            <h4 style="align-content: start;">Walter White</h4>
-            <span>Master Chef</span>
-            <p>
-              Velit aut quia fugit et et. Dolorum ea voluptate vel tempore
-              tenetur ipsa quae aut. Ipsum exercitationem iure minima enim
-              corporis et voluptate.
-            </p>
+        <div class="col-lg-8 col-md-12 d-flex" data-aos-delay="200">
+          <div class="chef-member" style="text-align: left; padding: 10px">
+            <div class="member-info">
+              <h4 style="align-content: start">{{ libro.title }}</h4>
+              <span>{{ libro.author }}</span>
+              <div class="rating-system-wrapper no-js-hidden"> <div class="rating-system interactive-rate already-voted"> <input type="radio" autocomplete="off" id="rate-0-17081" data-item-id="17081" name="star" value="0"><label class="reset-rate hidden" for="rate-0-17081" title="Borrar mi voto"></label> <input type="radio" autocomplete="off" id="rate-1-17081" data-item-id="17081" name="star" value="1"> <label class="fill" for="rate-1-17081" title="Malo (SHIFT + 1)"></label> <input type="radio" autocomplete="off" id="rate-2-17081" data-item-id="17081" name="star" value="2"> <label class="fill" for="rate-2-17081" title="Normal (SHIFT + 2)"></label> <input type="radio" autocomplete="off" id="rate-3-17081" data-item-id="17081" name="star" value="3"> <label class="fill" for="rate-3-17081" title="Bueno (SHIFT + 3)"></label> <input type="radio" autocomplete="off" id="rate-4-17081" data-item-id="17081" name="star" value="4" checked=""> <label class="fill" for="rate-4-17081" title="Muy bueno (SHIFT + 4)"></label> <input type="radio" autocomplete="off" id="rate-5-17081" data-item-id="17081" name="star" value="5"><label for="rate-5-17081" title="Fantástico (SHIFT + 5)"></label></div><div class="rating-legend" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating"><div class="rating-user-action score"> <span>Puntuación:</span>  <span class="label-score" itemprop="ratingValue">8.57</span>  <span class="separator">|</span> <meta itemprop="bestRating" content="10"><meta itemprop="worstRating" content="0"> <span class="label-votes" itemprop="reviewCount">14</span> votos</div><div class="rating-user-action voting"> <span class="separator">|</span> <span>Enviando voto</span><i class="fa fa-circle-o-notch fa-spin loader" aria-hidden="true"></i></div><div class="rating-user-action already-voted"> <span class="separator">|</span> <span>¡Votado!</span><i class="icon-thumbs-up" aria-hidden="true"></i></div><div class="rating-user-action rate-error"> <span class="separator">|</span><span class="error-label"></span><i class="icon-times" aria-hidden="true"></i></div></div></div>
+              <h4 style="align-content: start">Detalles de libro</h4>
+              <h4 style="align-content: start">Contenido</h4>
+              <p>
+                {{ libro.content_short }}
+              </p>
+              <h4 style="align-content: start">Categorias</h4>
+              <ul
+                data-aos="fade-up"
+                data-aos-delay="200"
+                class="nav nav-tabs d-flex justify-content-left aos-init aos-animate"
+              >
+                <li  class="nav-item" *ngFor="let j of libro.categories">
+                  <button
+                    type="button"
+                    class="btnCategoria"
+                  >
+                    {{j.name}}
+                  </button>
+                </li>
+              </ul>
+              <h4 style="align-content: start">Etiquetas</h4>
+              <ul
+                data-aos="fade-up"
+                data-aos-delay="200"
+                class="nav nav-tabs d-flex justify-content-left aos-init aos-animate"
+              >
+                <li  class="nav-item" *ngFor="let i of libro.tags">
+                  <button
+                    type="button"
+                    class="btnCategoria"
+                  >
+                    {{i.name}}
+                  </button>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-
-        </div>
         <!-- End Chefs Member -->
-
 
         <!-- End Chefs Member -->
       </div>
     </div>
   </section>
 
-  <!-- End Breadcrumbs -->
-  <section
-    id="book-a-table"
-    class="book-a-table"
-    style="padding-top: 20px; padding-bottom: 20px"
-  >
-    <div class="container" data-aos="fade-up">
-      <div class="row g-0">
-        <div
-          class="col-lg-4 reservation-img"
-          style="background-image: url({{libro.cover}})"
-          data-aos="zoom-out"
-          data-aos-delay="200"
-        ></div>
-
-        <div class="col-lg-8 d-flex align-items-center reservation-form">
-          <div class="chef-member">
-            <div class="member-img">
-              <img
-                src="assets/img/chefs/chefs-1.jpg"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info">
-              <h4>Walter White</h4>
-              <span>Master Chef</span>
-              <p>
-                Velit aut quia fugit et et. Dolorum ea voluptate vel tempore
-                tenetur ipsa quae aut. Ipsum exercitationem iure minima enim
-                corporis et voluptate.
-              </p>
-            </div>
-          </div>
-          <div class="php-email-form">
-            <div class="member-info">
-              <h4>Walter White</h4>
-              <span>Master Chef</span>
-              <p>
-                Velit aut quia fugit et et. Dolorum ea voluptate vel tempore
-                tenetur ipsa quae aut. Ipsum exercitationem iure minima enim
-                corporis et voluptate.
-              </p>
-            </div>
-            <div class="row gy-4">
-              <h2>{{libro.title}}zz</h2>
-            </div>
-            <div class="row gy-4">
-              <h5>{{libro.content_short}}zz</h5>
-            </div>
-          </div>
-                  </div>
-        <!-- End Reservation Form -->
-      </div>
-    </div>
-  </section>
   <app-recomendaciones></app-recomendaciones>
+  <!-- End #main -->
 </main>
-<!-- End #main -->
