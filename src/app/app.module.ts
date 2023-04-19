@@ -20,6 +20,8 @@ import { GaleriaComponent } from './components/galeria/galeria.component';
 import { EventosComponent } from './components/eventos/eventos.component';
 import { AutoresComponent } from './components/autores/autores.component';
 import { RecomendacionesComponent } from './components/recomendaciones/recomendaciones.component';
+import { BibliotecaComponent } from './views/biblioteca/biblioteca.component';
+import { PopularesView } from './views/populares/populares.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { RecomendacionesComponent } from './components/recomendaciones/recomenda
     EventosComponent,
     AutoresComponent,
     RecomendacionesComponent,
+    BibliotecaComponent,
+    PopularesView
   ],
   imports: [BrowserModule, HttpClientModule, FormsModule,AppRouter],
   providers: [ApiService],

@@ -1,0 +1,32 @@
+<!-- ======= Menu Section ======= -->
+<section id="populares" class="menu">
+  <div class="container" data-aos="fade-up">
+    <div class="section-header">
+
+    </div>
+    <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
+      <div class="tab-pane fade active show" id="menu-starters" *ngFor="let h of recomendados">
+        <div class="tab-header text-center">
+
+          <h3>{{h.name}}</h3>
+        </div>
+        <div class="row gy-5">
+          <div
+            class="col-lg-1 col-md-2 col-sm-3 col-4 menu-item"
+            *ngFor="let item of libros"
+            style="padding-right: 0;
+             padding-left: 0;"
+          >
+            <a class="card" [routerLink]="['book', item.ID]"
+              ><img
+                src="{{ item.cover }}"
+                class="img-fluid libro imagen"
+                style="padding: 0;max-height: calc(var(--bs-gutter-x) * 8);"
+                alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -11,5 +11,13 @@ export class FooterComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  topCero(){
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+});
+console.log("Movemos scroll top");
+  }
 
 }

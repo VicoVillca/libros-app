@@ -31,7 +31,7 @@
 
         <div class="row gy-5">
           <div class="col-lg-2 col-md-3 col-sm-4 col-6 menu-item" *ngFor="let item of libros" >
-            <a class="card "   [routerLink]="['../book',item.ID]"
+            <a class="card "   [routerLink]="['book',item.ID]"
               ><img
                 src={{item.cover}}
                 class=" img-fluid libro imagen"
