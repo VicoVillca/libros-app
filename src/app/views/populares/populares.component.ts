@@ -30,7 +30,11 @@ export class PopularesView implements OnInit {
     }
     return c;
   }
+  getSaludo(){
+    console.log("Hola mundo");
+  }
   ngOnInit(): void {
+    console.log("ngonInit populares component");
     //this.libros = this.api.getLibrosReComenadados(this.recomendados[0]);
     this.recomendados= this.api.getCategories();
 
