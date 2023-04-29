@@ -8,14 +8,13 @@ import { ApiService } from 'src/app/service/api.service';
   styleUrls: ['./populares.component.css'],
 })
 export class PopularesView implements OnInit {
-  recomendados: { category_id: number; name: string; nicename: string; }[] = [
-  ];
+  recomendados: { category_id: number; name: string; nicename: string }[] = [];
   seleccionado: number = 0;
   libros: Libro[] = [];
   constructor(private api: ApiService) {}
   seleccionamos(i: number) {
     this.seleccionado = i;
-    this.recomendados= this.api.getCategories();
+    this.recomendados = this.api.getCategories();
     console.log(this.libros);
   }
   getClass(i: number) {
@@ -30,14 +29,9 @@ export class PopularesView implements OnInit {
     }
     return c;
   }
-  getSaludo(){
-    console.log("Hola mundo");
-  }
-  ngOnInit(): void {
-    console.log("ngonInit populares component");
-    //this.libros = this.api.getLibrosReComenadados(this.recomendados[0]);
-    this.recomendados= this.api.getCategories();
 
+  ngOnInit(): void {
+    this.recomendados = this.api.getCategories();
     this.libros = this.api.getLibrosReComenadados('');
     console.log(this.libros);
   }
