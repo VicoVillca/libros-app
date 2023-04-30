@@ -22,6 +22,7 @@ import { AutoresComponent } from './components/autores/autores.component';
 import { RecomendacionesComponent } from './components/recomendaciones/recomendaciones.component';
 import { BibliotecaComponent } from './views/biblioteca/biblioteca.component';
 import { PopularesView } from './views/populares/populares.component';
+import { SelectComponent } from './components/select/select.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { PopularesView } from './views/populares/populares.component';
     AutoresComponent,
     RecomendacionesComponent,
     BibliotecaComponent,
-    PopularesView
+    PopularesView,
+    SelectComponent
   ],
   imports: [BrowserModule, HttpClientModule, FormsModule,AppRouter],
   providers: [ApiService],
