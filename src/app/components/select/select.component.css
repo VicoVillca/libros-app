@@ -36,7 +36,7 @@
 }
 
 .content-select select:hover{
-	background: #B1E8CD;
+	background: white;
 }
 
 /*
@@ -51,8 +51,8 @@ dos bordes con color y que giramos con transform: rotate(-45deg);
 	width: 16px;
 	height: 16px;
 	display: block;
-	border-left:4px solid #2AC176;
-	border-bottom:4px solid #2AC176;
+	border-left:4px solid var(--color-primary);
+	border-bottom:4px solid var(--color-primary);
 	transform: rotate(-45deg); /* Giramos el cuadrado */
 	transition: all 0.25s ease;
 }
